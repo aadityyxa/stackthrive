@@ -9,6 +9,12 @@ import { Router } from '@angular/router';
 })
 export class SignUpComponent {
   onSubmit() {
-    console.log('Form Submitted')
+    // Get the current URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    console.log(window.location); 
+// Fetch the value of the 'redirectUrl' parameter
+    const returnUrl = urlParams.get('returnUrl') || '/';
+// Decode the Url
+    const decodedRedirectUrl: string = decodeURIComponent(returnUrl); 
   }
 }

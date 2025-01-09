@@ -3,15 +3,10 @@
 </style>
 
 <h1>Onboarding Page</h1>
-<form>
+<form onsubmit="(e)=> {e.preventDefault()
+  onSubmit(); 
+}">
   <label for="name">Name</label>
   <input type="text" id="name" ngModel name="name" required>
-
-  <label for="email">Email</label>
-  <input type="email" id="email" ngModel name="email" required>
-
-  <label for="mobile">Mobile</label>
-  <input type="text" id="mobile" ngModel name="mobile" required>
-
   <button type="submit">Sign Up</button>
 </form>

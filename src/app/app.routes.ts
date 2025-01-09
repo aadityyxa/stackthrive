@@ -6,7 +6,8 @@ import { Sign } from 'crypto';
 import { Component } from '@angular/core';
 
 export const routes: Routes = [
-    {path: '', component: HomeComponent},
+    {path: '', redirectTo:'/home', pathMatch:'full'},
+    {path:'home', component:HomeComponent},
     {path:'sign-up', component:SignUpComponent},
     {path:'thank-you', component:ThankYouComponent}
 ];
